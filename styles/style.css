@@ -1,0 +1,17 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+}
+.side1{
+  float: left;
+      width: 20%;
+      background-color: red;
+}
+
+.side2{
+  float: right;
+      width: 80%;
+      background-color: blue;
+}
