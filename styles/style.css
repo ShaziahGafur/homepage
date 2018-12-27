@@ -7,11 +7,33 @@ html, body {
 .side1{
   float: left;
       width: 20%;
-      background-color: red;
+      background-color: yellow;
 }
 
 .side2{
   float: right;
       width: 80%;
-      background-color: blue;
+      background-color: green;
+}
+
+.side1_1{
+background-color: red;
+/*position:absolute;
+top:0px;*/
+/*width:inherit;*/
+}
+
+.side1_2{
+  background-color: blue;
+/*width:inherit;*/
+}
+
+.side2_1{
+  background-color: red;
+  min-height: 200px;
+}
+
+.side2_2{
+  background-color: blue;
+  min-height: 300px;
 }
