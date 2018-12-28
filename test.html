@@ -13,18 +13,61 @@
     |  `----.|  |\  \----.|  |____ /  _____  \   |  |     |  |____ |  '--'  |   |  |_)  |     |  |        .----)   |   |  |  |  |  /  _____  \   /  /----.|  |  /  _____  \  |  |  |  |
      \______|| _| `._____||_______/__/     \__\  |__|     |_______||_______/    |______/      |__|        |_______/    |__|  |__| /__/     \__\ /________||__| /__/     \__\ |__|  |__|
 
-
+     Created by Shaziah G.
     -->
     <link rel="stylesheet" href="styles/test.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    function startTime() {
+        var monthNames = [ "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December" ];
+        var days = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+        "Saturday"];
+
+        var today = new Date();
+        var h = today.getHours();
+        var ampm ="A";
+        if (h>=12)
+            ampm="P";
+        if (h>12)
+        {
+        	h-=12;
+    }
+        else if (h==0)
+            h=12;
+        var mi = today.getMinutes();
+        mi = checkTime(mi);
+
+        n =  new Date();
+    y = n.getFullYear();
+    m = monthNames[n.getMonth()];
+    hi=today.getDay();
+
+    d = n.getDate();
+    hello=days[hi];
+
+        document.getElementById('date').innerHTML = hello+" " + m + " " +d+", "+ y;
+        document.getElementById('time').innerHTML =h + ":" + mi+" "+ampm+"M";
+
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+
+
+        </script>
 </head>
 
-<body>
+<body onload="startTime()">
     <div class="side1">
         <div class="side1_1">
-            <p>Date + Time</p>
+           <div class="" id="date"></div>
+            <div id="time"></div>
         </div>
 
         <div class="side1-2">
@@ -34,34 +77,119 @@
     <div class="side2">
         <div class="side2-1">
             <!-- part of side 2 with navigation + quote -->
-            <nav class="drop-down">
-              <ul>
-                  <li>Academic</li>
-                    <li><a href="https://q.utoronto.ca">Quercus</a></li>
-
-                  <li>Concentration</li>
-                  <li>Social</li>
-                  <li>Get Curious</li>
-                  <li>Productivity</li>
-                  <li>Reddit</li>
-                  <li>Learn Something New</li>
-                  <li>Get Inspired</li>
-                  <li>Created by Shaziah G.</li>
-              </ul>
-            </nav>
 
               <div class="navbar">
-                <a href="#home">Home</a>
-                <a href="#news">News</a>
                 <div class="dropdown">
-                  <button class="dropbtn">Dropdown
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                  </div>
+
+
+                <div class="button">
+                <button class="btnlabel">ACADEMIC
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://q.utoronto.ca/">Querqus</a>
+                  <a href="http://www.math.toronto.edu/burbulla/">Math Notes</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">CONCENTRATION
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://www.noisli.com/">Noisli</a>
+                  <a href="https://www.youtube.com/watch?v=TqmDn2URAvc&t=15s">Epic Motivational Mix</a>
+                  <a href="https://play.spotify.com/album/4GusunD6mDAoPYxtRcHZyP">Spotify Study Music</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">SOCIAL
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://www.facebook.com/">Facebook</a>
+                  <a href="https://twitter.com/">Twitter</a>
+                  <a href="https://www.linkedin.com/in/">LinkedIn</a>
+                  <a href="#">Instagram</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">GET CURIOUS
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://curiosity.com/">Curiosity.com</a>
+                  <a href="http://www.businessinsider.com/sai">Business Insider Tech</a>
+                  <a href="https://www.recode.net/">Recode</a>
+                  <a href="#">Mashable</a>
+                  <a href="https://latesthackingnews.com/">Latest Hacking News</a>
+                  <a href="http://www.marketwatch.com/">MarketWatch</a>
+                  <a href="https://techcrunch.com/">TechCrunch</a>
+                  <a href="https://www.howstuffworks.com/">HowStuffWorks</a>
+                  <a href="https://www.theverge.com/">The Verge</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">PRODUCTIVITY
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://todoist.com/app?lang=en#agenda%2Foverdue%20%26%20!assigned%20to%3A%20other%2C%20today%20%26%20!assigned%20to%3A%20other">Todoist</a>
+                  <a href="https://keep.google.com/u/0/">Google Keep</a>
+                  <a href="https://slack.com/">Slack</a>
+                  <a href="https://discordapp.com/channels/@me">Discord</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">REDDIT
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://www.reddit.com/r/ProjectReddit/">r/ProjectReddit</a>
+                  <a href="https://www.reddit.com/r/dailyprogrammer">r/DailyProgrammer</a>
+                  <a href="https://www.reddit.com/r/cscareerquestions">r/CS Career Questions</a>
+                  <a href="https://www.reddit.com/r/youshouldknow">r/YouShouldKnow</a>
+                  <a href="https://www.reddit.com/r/Technology">r/Technology</a>
+                  <a href="https://www.reddit.com/r/SoftwareEngineering">r/SoftwareEngineering</a>
+                  <a href="https://www.reddit.com/r/Philosophy">r/Philosophy</a>
+                  <a href="https://www.reddit.com/r/HowtoHack">r/HowtoHack</a>
+                  <a href="https://www.reddit.com/r/Futurology">r/Futurology</a>
+                  <a href="https://www.reddit.com/r/Engineering">r/Engineering</a>
+                  <a href="https://www.reddit.com/r/CrazyIdeas">r/Crazy Ideas</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">LEARN SOMETHING NEW
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">edX</a>
+                  <a href="#">Coursera</a>
+                  <a href="https://www.youtube.com/learncodeacademy/">Learncode.Academy</a>
+                  <a href="https://www.youtube.com/channel/UCM-DpUDIc2w599QZKGmBYcg">Anthony Geranio</a>
+                  <a href="https://www.youtube.com/channel/UC4QZ_LsYcvcq7qOsOhpAX4A">ColdFusion</a>
+                  <a href="https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg">MathLoger</a>
+                  <a href="https://www.youtube.com/channel/UCHGAqdQBKTVON_FUCIYCh3Q">MercifulServant</a>
+                  <a href="https://www.youtube.com/channel/UCdJ9oJ2GUF8Vmb-G63ldGWg">Reactions</a>
+                  <a href="https://www.youtube.com/channel/UCLXo7UDZvByw2ixzpQCufnA">Vox</a>
+                  <a href="https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA">Veritasium</a>
+                  <a href="https://www.youtube.com/channel/UCZYTClx2T1of7BRZ86-8fow">SciShow</a>
+                  <a href="https://www.youtube.com/channel/UCzWQYUVCpZqtN93H8RR44Qw">Seeker</a>
+                  <a href="https://www.youtube.com/channel/UCsooa4yRKGN_zEE8iknghZA">TED Ed</a>
+
+
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel"><a href ="#">GET INSPIRED</a>
+                </button>
+
+                </div>
+
+                <div class="button">
+                <button class="btnlabel"><a href ="https://github.com/ShaziahGafur/homepage">CREATED BY SHAZIAH G.</a>
+                </button>
+                </div>
+
                 </div>
               </div>
 

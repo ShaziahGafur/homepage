@@ -5,21 +5,24 @@ html, body {
     width: 100%;
 }
 
+body{
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("bkgrd.jpg");
+}
+
+/* Establishing Layout */
+
 .side1{
   float: left;
       width: 20%;
-      background-color: yellow;
-
 }
 
 .side2{
   float: right;
       width: 80%;
-      background-color: green;
+
 }
 
 .side1_1{
-  background-color: orange;
   min-height: 200px;
 width: 100%;
 float:left;
@@ -27,13 +30,12 @@ float:left;
 
 .side1-2{
   background-color: purple;
-  position: relative;
   float:left;
+  width: 100%;
 
 }
 
 .side2-1{
-background-color: lightblue;
 width: 100%;
 float:left;
 min-height: 200px;
@@ -41,14 +43,24 @@ min-height: 200px;
 
 .side2-2{
   background-color: blue;
+  width: 100%;
+  float:left;
+}
+
+/* Side 1_1 */
+
+#date,#time{
+  color: rgb(150,150,150);
+  font-family: 'Pontano Sans', sans-serif;
 }
 
 /*Navigation Bar*/
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
-  font-family: Arial, Helvetica, sans-serif;
+  /*background-color: #333;*/ /* bkgrnd colour of entire nav*/
+  font-family: 'Pontano Sans', sans-serif;
+  border-bottom: solid rgb(200, 200, 200) 1px;
 }
 
 .navbar a {
@@ -56,35 +68,43 @@ min-height: 200px;
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 16px; /**/
   text-decoration: none;
 }
 
-.dropdown {
+.dropdown,.button {
   float: left;
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
-  font-size: 16px;
+.dropdown .btnlabel {
+  font-size: 10px;
   border: none;
   outline: none;
-  color: white;
-  padding: 14px 16px;
+  color: rgb(200, 200, 200);
+  padding: 10px 10px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+.btnlabel > a{
+  font-size:inherit;
+  margin:0px;
+  padding:0px;
+  color:inherit;
+
+}
+
+.navbar a:hover, .button:hover button {
+  background-color: white;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 160px; /**/
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -92,7 +112,7 @@ min-height: 200px;
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 12px 16px;/**/
   text-decoration: none;
   display: block;
   text-align: left;
@@ -102,6 +122,6 @@ min-height: 200px;
   background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
+.button:hover .dropdown-content {
   display: block;
 }
