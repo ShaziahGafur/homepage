@@ -7,8 +7,14 @@ Learn Web Scraping with Node.js directly in website's js file
 
 Option (2) 
 Learn how to use Flask (or Django) and pass a python variable to the js file
+Using Django: https://www.youtube.com/watch?v=nWRboXrcipU 
 
 Option (3)
 Learn AJAX (from jQuery) to:
 	#1. Make HTML page run python script upon loading
 	#2. Make js read txt file (quote.txt) and update quote id 
+
+Option (4)
+Learn how to use Cherrypy and do this:
+https://stackoverflow.com/questions/41354948/passing-variables-to-html-file-on-python
+to pass a variable to the html page

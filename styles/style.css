@@ -4,36 +4,150 @@ html, body {
     min-height: 100%;
     width: 100%;
 }
+
+body{
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("https://images.unsplash.com/photo-1546548432-a8f3f13815bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+
+/* Establishing Layout */
+
 .side1{
   float: left;
       width: 20%;
-      background-color: yellow;
 }
 
 .side2{
   float: right;
       width: 80%;
-      background-color: green;
+
 }
 
 .side1_1{
-background-color: red;
-/*position:absolute;
-top:0px;*/
-/*width:inherit;*/
-}
-
-.side1_2{
-  background-color: blue;
-/*width:inherit;*/
-}
-
-.side2_1{
-  background-color: red;
   min-height: 200px;
+width: 100%;
+float:left;
 }
 
-.side2_2{
-  background-color: blue;
-  min-height: 300px;
+.side1-2{
+  float:left;
+  width: 100%;
+
+}
+
+.side2-1{
+width: 100%;
+float:left;
+min-height: 200px;
+}
+
+.side2-2{
+  background-color: grey;
+  width: 100%;
+  float:left;
+}
+
+/* Side 1_1 */
+
+#date,#time{
+  color: rgb(150,150,150);
+  font-family: 'Pontano Sans', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#time{
+  font-size: 40px;
+
+}
+
+/*Side1_2*/
+
+#customize-script-container{
+  display: none;  
+}
+
+/*Navigation Bar*/
+
+.navbar {
+  overflow: hidden;
+  /*background-color: #333;*/ /* bkgrnd colour of entire nav*/
+  font-family: 'Pontano Sans', sans-serif;
+  border-bottom: solid rgb(200, 200, 200) 1px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px; /**/
+  text-decoration: none;
+}
+
+.dropdown,.button {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .btnlabel {
+  font-size: 11px;
+  border: none;
+  outline: none;
+  color: rgb(200, 200, 200);
+  padding: 10px 10px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.btnlabel > a{
+  font-size:inherit;
+  margin:0px;
+  padding:0px;
+  color:inherit;
+
+}
+
+.navbar a:hover, .button:hover button {
+  background-color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px; /**/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 8px 16px;/**/
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.button:hover .dropdown-content {
+  display: block;
+}
+
+/*Daily Quote */
+
+#quote{
+  color:white;
+  font-family: 'Pontano Sans';
+}
+
+/* Side2_2*/
+iframe{
+  float:left;
+  width: 50%;
+  style="border:none;
 }

@@ -1,61 +1,246 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <title>Homepage</title>
-<!--
 
-  ______ .______       _______     ___   .___________. _______  _______     .______   ____    ____         _______. __    __       ___      ________   __       ___       __    __
- /      ||   _  \     |   ____|   /   \  |           ||   ____||       \    |   _  \  \   \  /   /        /       ||  |  |  |     /   \    |       /  |  |     /   \     |  |  |  |
-|  ,----'|  |_)  |    |  |__     /  ^  \ `---|  |----`|  |__   |  .--.  |   |  |_)  |  \   \/   /        |   (----`|  |__|  |    /  ^  \   `---/  /   |  |    /  ^  \    |  |__|  |
-|  |     |      /     |   __|   /  /_\  \    |  |     |   __|  |  |  |  |   |   _  <    \_    _/          \   \    |   __   |   /  /_\  \     /  /    |  |   /  /_\  \   |   __   |
-|  `----.|  |\  \----.|  |____ /  _____  \   |  |     |  |____ |  '--'  |   |  |_)  |     |  |        .----)   |   |  |  |  |  /  _____  \   /  /----.|  |  /  _____  \  |  |  |  |
- \______|| _| `._____||_______/__/     \__\  |__|     |_______||_______/    |______/      |__|        |_______/    |__|  |__| /__/     \__\ /________||__| /__/     \__\ |__|  |__|
+<head>
+    <title>Homepage</title>
+    <!--
+
+      ______ .______       _______     ___   .___________. _______  _______     .______   ____    ____         _______. __    __       ___      ________   __       ___       __    __
+     /      ||   _  \     |   ____|   /   \  |           ||   ____||       \    |   _  \  \   \  /   /        /       ||  |  |  |     /   \    |       /  |  |     /   \     |  |  |  |
+    |  ,----'|  |_)  |    |  |__     /  ^  \ `---|  |----`|  |__   |  .--.  |   |  |_)  |  \   \/   /        |   (----`|  |__|  |    /  ^  \   `---/  /   |  |    /  ^  \    |  |__|  |
+    |  |     |      /     |   __|   /  /_\  \    |  |     |   __|  |  |  |  |   |   _  <    \_    _/          \   \    |   __   |   /  /_\  \     /  /    |  |   /  /_\  \   |   __   |
+    |  `----.|  |\  \----.|  |____ /  _____  \   |  |     |  |____ |  '--'  |   |  |_)  |     |  |        .----)   |   |  |  |  |  /  _____  \   /  /----.|  |  /  _____  \  |  |  |  |
+     \______|| _| `._____||_______/__/     \__\  |__|     |_______||_______/    |______/      |__|        |_______/    |__|  |__| /__/     \__\ /________||__| /__/     \__\ |__|  |__|
+
+     Created by Shaziah G.
+    -->
+    <link rel="stylesheet" href="styles/style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--take out one jQuery cds link-->
+<script type="text/javascript" src="quote.js"></script>
+<div class="tso_default_style">
+  <script>TheySaidSo.render({ quote : 'VsevE5h3LUUiZedYPKPwlweF'});</script>
+</div>
+    <script>
+    function startTime() {
+        var monthNames = [ "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December" ];
+        var days = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+        "Saturday"];
+
+        var today = new Date();
+        var h = today.getHours();
+        var ampm ="A";
+        if (h>=12)
+            ampm="P";
+        if (h>12)
+        {
+        	h-=12;
+    }
+        else if (h==0)
+            h=12;
+        var mi = today.getMinutes();
+        mi = checkTime(mi);
+
+        n =  new Date();
+    y = n.getFullYear();
+    m = monthNames[n.getMonth()];
+    hi=today.getDay();
+
+    d = n.getDate();
+    hello=days[hi];
+
+        document.getElementById('date').innerHTML = hello+" " + m + " " +d+", "+ y;
+        document.getElementById('time').innerHTML =h + ":" + mi+" "+ampm+"M";
+
+        var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
 
 
--->
+        </script>
+</head>
 
-      <link rel="stylesheet" href="styles/style.css" type="text/css" />
-      <link href="https://fonts.googleapis.com/css?family=Codystar|Roboto|Open+Sans:300" rel="stylesheet">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-   </head>
-   <body>
-<!--    <script type="text/javascript" src="scripts/transitions.js"></script> -->
-  <div class = "side1"> <!-- the aside with date + trending content + daily challenge -->
-    <section class = "side1_1">
-<p>Date + Time</p>
-</section>
-    <div class = "side1_2">
-<p>Trending</p>
+<body onload="startTime()"> <!-- startTime() function removed-->
+    <div class="side1">
+        <div class="side1_1">
+           <div class="" id="date"></div>
+            <div id="time"></div>
+        </div>
+
+        <div class="side1-2">
+          
+
+<script type='text/javascript' src='https://darksky.net/widget/small/43.654,-79.3872/ca12/en.js?width=100%&height=200&title=Toronto, ON&textColor=ececec&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Trebuchet MS&customFont=&units=ca'></script>
+        </div>
     </div>
+    <div class="side2">
+        <div class="side2-1">
+            <!-- part of side 2 with navigation + quote -->
 
-</div>
-<div class = "side2">
-  <div class = "side2_1"> <!-- part of side 2 with navigation + quote -->
-              <nav class="drop-down">
-                <ul>
-                    <li>Academic</li>
-                      <li><a href="https://q.utoronto.ca">Quercus</a></li>
+              <div class="navbar">
+                <div class="dropdown">
 
-                    <li>Concentration</li>
-                    <li>Social</li>
-                    <li>Get Curious</li>
-                    <li>Productivity</li>
-                    <li>Reddit</li>
-                    <li>Learn Something New</li>
-                    <li>Get Inspired</li>
-                    <li>Created by Shaziah G.</li>
-                </ul>
-              </nav>
 
-              <h1>"Daily Wisdom Quote"</h1>
-              </div> <!--end of side 2.1 -->
+                <div class="button">
+                <button class="btnlabel">ACADEMIC
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://q.utoronto.ca/">Querqus</a>
+                  <a href="http://www.math.toronto.edu/burbulla/">Math Notes</a>
+                </div>
+                </div>
 
-            <div class = "side2_2">
-              <h1>Science Daily</h1>
-            </div>
-</div>
-   </body>
+                <div class="button">
+                <button class="btnlabel">CONCENTRATION
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://www.noisli.com/">Noisli</a>
+                  <a href="https://www.youtube.com/watch?v=TqmDn2URAvc&t=15s">Epic Motivational Mix</a>
+                  <a href="https://play.spotify.com/album/4GusunD6mDAoPYxtRcHZyP">Spotify Study Music</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">SOCIAL
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://www.facebook.com/">Facebook</a>
+                  <a href="https://twitter.com/">Twitter</a>
+                  <a href="https://www.linkedin.com/in/">LinkedIn</a>
+                  <a href="#">Instagram</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">GET CURIOUS
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://curiosity.com/">Curiosity.com</a>
+                  <a href="http://www.businessinsider.com/sai">Business Insider Tech</a>
+                  <a href="https://www.recode.net/">Recode</a>
+                  <a href="#">Mashable</a>
+                  <a href="https://latesthackingnews.com/">Latest Hacking News</a>
+                  <a href="http://www.marketwatch.com/">MarketWatch</a>
+                  <a href="https://techcrunch.com/">TechCrunch</a>
+                  <a href="https://www.howstuffworks.com/">HowStuffWorks</a>
+                  <a href="https://www.theverge.com/">The Verge</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">PRODUCTIVITY
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://todoist.com/app?lang=en#agenda%2Foverdue%20%26%20!assigned%20to%3A%20other%2C%20today%20%26%20!assigned%20to%3A%20other">Todoist</a>
+                  <a href="https://keep.google.com/u/0/">Google Keep</a>
+                  <a href="https://slack.com/">Slack</a>
+                  <a href="https://discordapp.com/channels/@me">Discord</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">REDDIT
+                </button>
+                <div class="dropdown-content">
+                  <a href="https://www.reddit.com/r/ProjectReddit/">r/ProjectReddit</a>
+                  <a href="https://www.reddit.com/r/dailyprogrammer">r/DailyProgrammer</a>
+                  <a href="https://www.reddit.com/r/cscareerquestions">r/CS Career Questions</a>
+                  <a href="https://www.reddit.com/r/youshouldknow">r/YouShouldKnow</a>
+                  <a href="https://www.reddit.com/r/Technology">r/Technology</a>
+                  <a href="https://www.reddit.com/r/SoftwareEngineering">r/SoftwareEngineering</a>
+                  <a href="https://www.reddit.com/r/Philosophy">r/Philosophy</a>
+                  <a href="https://www.reddit.com/r/HowtoHack">r/HowtoHack</a>
+                  <a href="https://www.reddit.com/r/Futurology">r/Futurology</a>
+                  <a href="https://www.reddit.com/r/Engineering">r/Engineering</a>
+                  <a href="https://www.reddit.com/r/CrazyIdeas">r/Crazy Ideas</a>
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel">LEARN SOMETHING NEW
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">edX</a>
+                  <a href="#">Coursera</a>
+                  <a href="https://www.youtube.com/learncodeacademy/">Learncode.Academy</a>
+                  <a href="#">Lynda</a>
+                  <a href="#">Mango Languages</a>
+                  <a href="https://www.youtube.com/channel/UCM-DpUDIc2w599QZKGmBYcg">Anthony Geranio</a>
+                  <a href="https://www.youtube.com/channel/UC4QZ_LsYcvcq7qOsOhpAX4A">ColdFusion</a>
+                  <a href="https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg">MathLoger</a>
+                  <a href="https://www.youtube.com/channel/UCHGAqdQBKTVON_FUCIYCh3Q">MercifulServant</a>
+                  <a href="https://www.youtube.com/channel/UCdJ9oJ2GUF8Vmb-G63ldGWg">Reactions</a>
+                  <a href="https://www.youtube.com/channel/UCLXo7UDZvByw2ixzpQCufnA">Vox</a>
+                  <a href="https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA">Veritasium</a>
+                  <a href="https://www.youtube.com/channel/UCZYTClx2T1of7BRZ86-8fow">SciShow</a>
+                  <a href="https://www.youtube.com/channel/UCzWQYUVCpZqtN93H8RR44Qw">Seeker</a>
+                  <a href="https://www.youtube.com/channel/UCsooa4yRKGN_zEE8iknghZA">TED Ed</a>
+
+
+                </div>
+                </div>
+
+                <div class="button">
+                <button class="btnlabel"><a href ="#">GET INSPIRED</a>
+                </button>
+
+                </div>
+
+                <div class="button">
+                <button class="btnlabel"><a href ="https://github.com/ShaziahGafur/homepage">CREATED BY SHAZIAH G.</a>
+                </button>
+                </div>
+
+                </div>
+              </div>
+
+            <h1 id="quote">"Quote of the Day"</h1>
+        </div>
+        <!--end of side 2.1 -->
+        <script>
+        var Techsites = [
+        'https://techcrunch.com/',
+        'https://latesthackingnews.com/',
+        'https://www.businessinsider.com/sai',
+                  ];
+        var NonTechsites = [
+        'http://www.marketwatch.com/',
+        'https://www.howstuffworks.com/',
+        'https://www.sciencedaily.com/',
+                  ];
+
+        function GimmeNonTech() {
+        var i = parseInt(Math.random() * 3);
+        src = Techsites[i];
+        return 'https://www.sciencedaily.com/';
+        }
+
+        function GimmeTech() {
+          var i = parseInt(Math.random() * 3);
+          location.src = Techsites[i];
+        }
+
+
+        </script>
+        <div class="side2-2">
+            <iframe height=400px  style="border:none;" src="https://www.sciencedaily.com">
+              <p>Your browser does not support iframes.</p>
+            </iframe>
+            <iframe height=400px style="border:none;" src="https://www.howstuffworks.com">
+              <p>Your browser does not support iframes.</p>
+            </iframe>
+        </div>
+    </div>
+</body>
+
 </html>
