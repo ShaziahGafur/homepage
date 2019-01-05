@@ -16,15 +16,13 @@ def daily_quote(day_year):
     quote = entire_div.findAll(text=True, recursive=False)
     quote = quote[0]
     quote = quote[8:-5]
-    '''
-    #first_pos = quote_temp.find('\n') + 8
-    #if first_pos == 7:
-    #first_pos = quote_temp.find("\n") + 8
-    #quote = quote[first_pos:]
-    #last_pos = quote.find('\n')
-    #quote = quote[:last_pos]
-    '''
+
     print(quote)
 
+    fw = open('quote.txt', 'w')
+    fw.truncate()
+    fw.write(quote)
+    fw.close
 
-daily_quote(day_year)
+
+daily_quote(318)

@@ -6,7 +6,7 @@ html, body {
 }
 
 body{
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("bkgrd.jpg");
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("https://images.unsplash.com/photo-1543363136-3f2d17e6d6cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
 }
 
 /* Establishing Layout */
@@ -29,7 +29,7 @@ float:left;
 }
 
 .side1-2{
-  background-color: purple;
+  background-color: darkgrey;
   float:left;
   width: 100%;
 
@@ -42,7 +42,7 @@ min-height: 200px;
 }
 
 .side2-2{
-  background-color: blue;
+  background-color: grey;
   width: 100%;
   float:left;
 }
@@ -112,7 +112,7 @@ min-height: 200px;
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;/**/
+  padding: 8px 16px;/**/
   text-decoration: none;
   display: block;
   text-align: left;
@@ -124,4 +124,9 @@ min-height: 200px;
 
 .button:hover .dropdown-content {
   display: block;
+}
+
+/*Daily Quote */
+#quote{
+  color:white;
 }

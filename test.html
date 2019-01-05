@@ -20,6 +20,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--take out one jQuery cds link-->
+    <script>
+          function goPython(){
+            startTime()
+
+              $.ajax({
+                  url: "PythonProject/retrieval.py",
+                 context: document.body
+
+                }).done(function() {
+                 alert('finished python script');;
+              });
+          jQuery.get('PythonProject/quote.txt', function(txt){
+              $('#quote').text(txt);
+          });
+          }
+
+      </script>
+
     <script>
     function startTime() {
         var monthNames = [ "January", "February", "March", "April", "May", "June",
@@ -63,7 +84,7 @@
         </script>
 </head>
 
-<body onload="startTime()">
+<body onload="goPython()"> <!-- startTime() function removed-->
     <div class="side1">
         <div class="side1_1">
            <div class="" id="date"></div>
@@ -196,7 +217,7 @@
               </div>
 
 
-            <h1>"Daily Wisdom Quote"</h1>
+            <h1 id="quote">"Daily Wisdom Quote"</h1>
         </div>
         <!--end of side 2.1 -->
 

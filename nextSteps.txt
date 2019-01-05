@@ -1,0 +1,14 @@
+Next Steps
+
+Option (1)
+Learn Web Scraping with Node.js directly in website's js file
+	Either store in txt file and read it
+	or pass a variable to the js file which 
+
+Option (2) 
+Learn how to use Flask (or Django) and pass a python variable to the js file
+
+Option (3)
+Learn AJAX (from jQuery) to:
+	#1. Make HTML page run python script upon loading
+	#2. Make js read txt file (quote.txt) and update quote id 
