@@ -42,7 +42,7 @@ min-height: 200px;
 }
 
 .side2-2{
-  background-color: rgb(10, 21, 40);
+  background-color: white/*rgb(10, 21, 40)*/;
   width: 100%;
   float:left;
 }
@@ -110,7 +110,7 @@ min-height: 200px;
 }
 
 .navbar a:hover, .button:hover button {
-  background-color: white;
+  background-color: rgb(2, 30, 73);
 }
 
 .dropdown-content {
@@ -151,4 +151,8 @@ iframe{
   float:left;
   width: 50%;
   style="border:none;
+}
+
+.iframe-1{
+  background:initial;
 }
