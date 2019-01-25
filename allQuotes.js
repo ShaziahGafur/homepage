@@ -1,5 +1,5 @@
 var theDaily = [
-  /*
+
   "Be yourself; everyone else is already taken",
   "You've gotta dance like there's nobody watching, Love like you'll never be hurt, Sing like there's nobody listening, And live like it's heaven on earth.",
   "Be the change that you wish to see in the world",
@@ -58,7 +58,6 @@ var theDaily = [
   "Whatever you are, be a good one",
   "Two wrongs don't make a right, but they make a good excuse",
   "I hope she'll be a fool -- that's the best thing a girl can be in this world, a beautiful little fool",
-  "First they ignore you. Then they ridicule you. And then they attack you and want to burn you. And then they build monuments to you",
   "May you live every day of your life",
   "I believe that imagination is stronger than knowledge. That myth is more potent than history. That dreams are more powerful than facts. That hope always triumphs over experience. That laughter is the only cure for grief. And I believe that love is stronger than death",
   "You can't stay in your corner of the Forest waiting for others to come to you. You have to go to them sometimes",
@@ -225,13 +224,13 @@ var theDaily = [
   "When you are courting a nice girl an hour seems like a second. When you sit on a red-hot cinder a second seems like an hour. That's relativity",
   "Two wrongs don't make a right, but they make a good excuse",
   "If the world were merely seductive, that would be easy. If it were merely challenging, that would be no problem. But I arise in the morning torn between a desire to improve the world and a desire to enjoy the world. This makes it hard to plan the day",
-  "Reader, suppose you were an idiot. And suppose you were a member of Congress. But I repeat myself",
+ "Reader, suppose you were an idiot. And suppose you were a member of Congress. But I repeat myself",
   "I do not want people to be very agreeable, as it saves me the trouble of liking them a great deal",
-  "Do you remember back at the hotel when you promised that if we lived, you’d get dressed up in a nurse’s outfit and give me a sponge bath?" asked ",
+  "Do you remember back at the hotel when you promised that if we lived, you’d get dressed up in a nurse’s outfit and give me a sponge bath?\" asked ",
   "The planet is fine. The people are fucked",
   "I like work: it fascinates me. I can sit and look at it for hours",
   "If a cluttered desk is a sign of a cluttered mind, of what, then, is an empty desk a sign",
-  "When his life was ruined, his family killed, his farm destroyed, Job knelt down on the ground and yelled up to the heavens, "Why god? Why me?" and the thundering voice of God answered, There's just something about you that pisses me off",
+  "When his life was ruined, his family killed, his farm destroyed, Job knelt down on the ground and yelled up to the heavens, \"Why god? Why me?\" and the thundering voice of God answered, There's just something about you that pisses me off",
   "There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplica",
   "There are two motives for reading a book; one, that you enjoy it; the other, that you can boast about it",
   "I did not attend his funeral, but I sent a nice letter saying I approved of it",
@@ -319,11 +318,10 @@ var theDaily = [
   "A serious and good philosophical work could be written consisting entirely of jokes",
   "Let children read whatever they want and then talk about it with them. If parents and kids can talk together, we won't have as much censorship because we won't have as much fear",
   "Happiness can be found, even in the darkest of times, if one only remembers to turn on the light",
-  "Sometimes I lie awake at night and I ask, \"Is life a multiple choice test or is it a true or false test?\" ...Then a voice comes to me out of the dark and says, "We hate to tell you this but life is a thousand word essay",
+  "Sometimes I lie awake at night and I ask, \"Is life a multiple choice test or is it a true or false test?\" ...Then a voice comes to me out of the dark and says, \"We hate to tell you this but life is a thousand word essay",
   "Well, I must endure the presence of a few caterpillars if I wish to become acquainted with the butterflies",
   "The important thing is not to stop questioning. Curiosity has its own reason for existing",
   "Is it possible, in the final analysis, for one human being to achieve perfect understanding of ano",
-  "Nothing was ever in tune. People just blindly grabbed at whatever there was: communism, health foods, zen, surfing, ballet, hypnotism, group encounters, orgies, biking, herbs, Catholicism, weight-lifting, travel, withdrawal, vegetarianism, India, painting, writing, sculpting, composing, conducting, backpacking, yoga, copulating, gambling, drinking, hanging around, frozen yogurt, Beethoven, Back, Buddha, Christ, TM, H, carrot juice, suicide, handmade suits, jet travel, New York City, and then it all evaporated and fell apart. People had to find things to do while waiting to die. I guess it was nice to have a choice",
   "Be like water making its way through cracks. Do not be assertive, but adjust to the object, and you shall find a way around or through it. If nothing within you stays rigid, outward things will disclose themsel",
   "I would believe only in a God that knows how to dance",
   "Be kind, for everyone you meet is fighting a hard battle",
@@ -398,7 +396,6 @@ var theDaily = [
 "In fact, the mere act of opening the box will determine the state o",
 "Madame, all stories, if continued far enough, end in death, and he is no true-story teller who would keep that from you",
 "Don't go looking for boys in the",
-*/
 "There is a wisdom of the head, and... there is a wisdom of the heart",
 "Where wisdom reigns, there is no conflict between thinking and feeling",
 "You cannot teach a man anything, you can only help him find it within himself",
@@ -407,14 +404,18 @@ var theDaily = [
 
 
 //today's date:
+function getDay(){
 var dayCount = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
   var today = new Date();
     var mn = today.getMonth();
     var dn = today.getDate();
     var dayOfYear = dayCount[mn] + dn;
+    return dayOfYear
+}
 
 function GimmeQuote() {
-  alert('test')
-document.getElementById('quote').innerHTML = theDaily[1];
+  var num = getDay();
+document.getElementById('quote').innerHTML = "\""+theDaily[num-1]+"\"";
+startTime();
 }
 //theDaily[dayofYear-1];

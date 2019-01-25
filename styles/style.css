@@ -143,7 +143,11 @@ min-height: 200px;
 
 #quote{
   color:white;
-  font-family: 'Pontano Sans';
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  position: relative;
+  top: 40px;
+  font-style: italic;
 }
 
 /* Side2_2*/
